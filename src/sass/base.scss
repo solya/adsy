@@ -1,0 +1,131 @@
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: $gray;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: $gray;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: $gray;
+}
+
+.modal{
+  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #fff;
+    opacity: 1; /* Firefox */
+  }
+
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #fff;
+  }
+
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: #fff;
+  }
+
+}
+
+html {
+  font: 400 18px/1.25 $gerbera;
+  color: $gray;
+  background: #fff;
+
+  &.active{
+    overflow: hidden;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+input {
+  outline: none;
+  color: $black;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+nav {
+  ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      list-style: none;
+
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+b, strong {
+  font-weight: bold;
+}
+
+h2{
+  font: 900 32px/1.25 $gerbera;
+  color: $black;
+  text-align: left;
+  position: relative;
+  max-width: 18em;
+  margin: 1em auto;
+  display: inline-block;
+
+  @include md{
+    font-size: 40px;
+  }
+
+  @include xl{
+    font-size: 71px;
+    margin: 54px auto 1.85em;
+  }
+
+  &.left-line,
+  &.right-line{
+
+    &:after{
+      content: "";
+      position: absolute;
+      width: 4.6em;
+      top: 20px;
+      height: 3px;
+      background: #cccccc;
+
+      @include md{
+        top: 25px;
+      }
+
+
+      @include xl {
+        top:45px;
+      }
+    }
+  }
+
+  &.left-line{
+    &:after{
+      right: 115%;
+    }
+  }
+
+  &.right-line{
+    &:after{
+      left: 115%;
+    }
+  }
+}
+
+
+.text-center{
+  text-align: center;
+  overflow: hidden;
+}
